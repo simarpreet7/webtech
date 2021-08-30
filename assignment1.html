@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .flex-column-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-div {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://unsplash.com/photos/jbywvpa9vH8/download?force=true&w=1920");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .login-div .login-comps {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    padding: 2em;
+    color: white;
+  }
+  .login-div form {
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .login-div form input[type=text],
+  .login-div form input[type=email],
+  .login-div form input[type=password] {
+    margin: 0.5rem auto;
+    background: rgba(80, 227, 194, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.5em;
+    width: 400px;
+    outline: none;
+  }
+  .login-div form input[type=text]:focus,
+  .login-div form input[type=email]:focus,
+  .login-div form input[type=password]:focus {
+    background-color: rgba(255, 255, 255, 0.329);
+    color: white;
+  }
+  .login-div form input[type=submit] {
+    background: black;
+    color: white;
+    border-radius: 5px;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    width: 250px;
+    border: none;
+  }
+  .login-div form input[type=submit]:active {
+    transform: scale(0.95);
+  }
+  .login-div form input[type=email]::placeholder,
+  .login-div form input[type=text]::placeholder,
+  .login-div form input[type=password]::placeholder {
+    color: white;
+  }
+  .login-div .text-center {
+    text-align: center;
+  }
+  .login-div a {
+    text-decoration: none;
+    color: white;
+  }
+  @media (max-width: 576px) {
+    .login-div {
+      padding: 2rem 1.5rem !important;
+    }
+    .login-div .login-comps,
+  .login-div input[type=text],
+  .login-div input[type=password] {
+      width: 100% !important;
+    }
+  }
+  </style>
+  <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm_password").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+  <div class="login-div flex-column-centered">
+    <div class="login-comps">
+      <h1 class="text-center">Sign Up</h1>
+      <form method="post" class="flex-column-centered" onsubmit='alert("form submitted")'>
+        <input type="email" name="user" id="user" placeholder="email" required>
+        <input type="text" name="user" id="user" placeholder="username" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input type="password" name="password" id="confirm_password" placeholder="Confirm Password" required>
+        <input type="submit" value="Login" onclick="return Validate()">
+      </form>
+      <a href="https://simarpreet7.github.io/">
+        <p class="text-center"> 2K18/CO/353 simarpreet singh</p>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
