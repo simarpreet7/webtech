@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simarpreet singh 2K18/CO/353</title>
+    <script>
+    function age(){
+        let x=Date.now()-new Date( document.getElementById('input').value)
+    document.getElementById('output').innerHTML+=x+" ms";
+    }
+    </script>
+</head>
+<body>
+    <input type="date" id="input">
+    <h3 id="output">your age : </h3>
+    <button onclick="age();">calculate age</button>
+</body>
+</html>
